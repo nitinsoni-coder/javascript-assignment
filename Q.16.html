@@ -1,0 +1,32 @@
+<script>
+    /*
+       Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+    - September, October or November, the season is Autumn.
+    - December, January or February, the season is Winter.
+    - March, April or May, the season is Spring
+    - June, July or August, the season is Summer
+    */
+
+    const checkSeason = prompt("enter month name to check seaseon");
+
+    const checkAutumn = ["September", "October", "November"].includes(checkSeason);
+    const checkWinter = ["December", "January", "Feburary"].includes(checkSeason);
+    const checkSpring = ["March", "April", "May"].includes(checkSeason);
+    const checkSummer = ["June", "July", "August"].includes(checkSeason);
+
+    if(checkAutumn)
+    {
+        alert("Autumn");
+    }else if(checkWinter)
+    {
+        alert("Winter")
+    }else if(checkSpring)
+    {
+        alert("Summer")
+    }else if(checkSummer)
+    {
+        alert("Summer");
+    }else{
+        alert("please enter valid month");
+    }
+</script>

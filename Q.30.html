@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+
+    <style>
+      body{
+        background-color: rgba(46, 45, 45, 0.153);
+
+      }
+      
+      .calculator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow:  1px 1px 20px 4px black;
+      }
+
+      input {
+        border: 1px solid black !important;
+      }
+
+      .calculator button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 20px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        background-color: #f2f2f2;
+        cursor: pointer;
+      }
+
+      .calculator button:hover {
+        background-color: #ddd;
+      }
+
+      .calculator button:active {
+        background-color: #aaa;
+      }
+
+      .calculator #result {
+        width: 200px;
+        height: 50px;
+        margin: 5px;
+        font-size: 24px;
+        text-align: right;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        border-radius: 25px;
+        padding-right: 10px;
+      }
+
+      .operator {
+        background-color: #fe9c12c1 !important;
+      }
+
+      .number {
+        background-color: #0f0f0fd3 !important;
+        color: white;
+        box-shadow: 1px 1px 10px 2px rgb(31, 30, 30);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="result" placeholder="0" />
+      <button onclick="clearResult()" class="operator">C</button>
+      <button onclick="getResult('/')" class="operator">÷</button>
+      <button onclick="getResult('*')" class="operator">x</button>
+      <button onclick="getResult('-')" class="operator">-</button>
+      <button onclick="getResult('+')" class="operator">+</button>
+      <button onclick="getResult('7')" class="number">7</button>
+      <button onclick="getResult('8')" class="number">8</button>
+      <button onclick="getResult('9')" class="number">9</button>
+      <button onclick="getResult('4')" class="number">4</button>
+      <button onclick="getResult('5')" class="number">5</button>
+      <button onclick="getResult('6')" class="number">6</button>
+      <button onclick="getResult('1')" class="number">1</button>
+      <button onclick="getResult('2')" class="number">2</button>
+      <button onclick="getResult('3')" class="number">3</button>
+      <button onclick="getResult('0')" class="number">0</button>
+      <button onclick="getResult('.')" class="operator">.</button>
+      <button onclick="calculate()" class="operator">=</button>
+    </div>
+
+    <script>
+      let result = document.getElementById("result");
+
+      function getResult(num) {
+        result.value += num;
+      }
+
+      function calculate() {
+        console.log("-----result.value-----", result.value);
+        result.value = eval(result.value);
+      }
+
+      function clearResult() {
+        result.value = "";
+      }
+    </script>
+  </body>
+</html>

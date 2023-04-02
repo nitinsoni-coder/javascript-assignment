@@ -1,0 +1,24 @@
+<script>
+/* Create a human readable time format using the Date time object
+    - YYYY-MM-DD HH:mm
+    - DD-MM-YYYY HH:mm
+    - DD/MM/YYYY HH:mm    
+*/
+
+const date = new Date();
+const YYYY = date.getFullYear();
+const MM = date.getMonth() + 1;
+const DD = date.getDate();
+const HH = date.getHours();
+const mm = date.getMinutes();
+
+//first format -  YYYY-MM-DD HH:mm
+const firstFormat = `${YYYY}-${MM}-${DD} ${HH}:${mm}`
+console.log(firstFormat);
+
+const secondFormat = `${DD}-${MM}-${YYYY} ${HH}:${mm}`
+console.log(secondFormat);
+
+const thirdFormat = `${DD}/${MM}/${YYYY} ${HH}:${mm}`
+console.log(thirdFormat);
+</script>

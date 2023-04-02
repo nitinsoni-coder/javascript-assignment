@@ -1,0 +1,30 @@
+<script>
+    //  Write a program to check that the number given by the user is a prime number or not.
+
+    const num = parseInt(prompt("Enter number to check prime or not")); 
+    let isPrime = true;
+
+    if(num == 1)
+    {
+        alert("number is not prime and nor composite");
+    }else if(num > 1)
+    {
+        for(let i = 2; i<num; i++)
+        {
+            if(num % i == 0)
+            {
+               isPrime = false;
+               break;
+            }
+        }
+
+        if(isPrime)
+        {
+            alert(`${num} is prime`)
+        }else{
+            alert(`${num} is not prime no.`)
+        }
+    }else{
+        alert("number is not a prime number");
+    }
+</script>

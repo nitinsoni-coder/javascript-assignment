@@ -1,0 +1,13 @@
+<script>
+     // Write a program which tells the number of days in a month.
+
+     const getDaysInMonth = function(month,year) {
+  
+          return new Date(year, month, 0).getDate();
+
+     };
+
+     let daysInMonth = parseInt(prompt("Enter the month in number"));
+     console.log(getDaysInMonth(daysInMonth, 2023));
+
+</script>
